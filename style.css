@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --textcolor: white;
+  --background-url: url(./assets/bg-mobile-dark.jpeg);
+
+  
+  --button-border: rgba(255, 255, 255, 0.5);
+  --button-border-hover: 
+  
+  --button-bg: rgba(255, 255, 255, 0.15);
+  --button-bg-hover: rgba(255, 255, 255, 0.15);
+  
+  --highlight-color: rgba(255, 255, 255, 0.25);
+  
+  --switch-image: url(./assets/moon-stars.svg);
+  --switch-bg-hover: rgba(255, 255, 255, 0.75);
+}
+
+.light {
+  --textcolor: black;
+  --background-url: url(./assets/bg-mobile-light.jpeg);
+  
+  --button-border: rgba(0, 0, 0, 0.5);  
+  
+  --button-bg: rgba(0, 0, 0, 0.05) ;
+  --button-bg-hover: rgba(0, 0, 0, 0.25);
+  
+  --highlight-color: rgba(0, 0, 0, 0.25);
+  
+  --switch-image: url(./assets/sun.svg);
+  --switch-bg-hover: rgba(255, 255, 255, 0.8);
+  
+}
+
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--textcolor);
+}
+
+body {
+  background: var(--background-url) no-repeat top center/cover;
+  transition: 0.8s;
+  height: 100vh;
+}
+
+#container {
+ /* border: 5px solid rgb(168, 117, 200); */
+  width: 100%;
+  max-width: 588px;
+
+  margin: auto;
+  /* Poderia ser margin-left e margin-right: auto
+    Assim, ele ja preenche automaticamente as margens em todos os lados, porém, no CSS NÃO É APLICADO EM CIMA E NEM EMBAIXO */
+}
+
+/*PROFILE*/
+
+    #profile {
+      display: block;
+      /* border: 3px solid red; */
+      padding: 24px;
+    }
+
+        .image {
+          /* border: 3px solid green; */
+          width: 130px;
+          margin: auto;
+          
+        }
+
+        .image img {
+          display: block;
+          width: 80%;
+          margin: auto;
+          
+          border: 2.5px solid var(--textcolor);
+          border-radius: 50%
+          
+        }
+
+        .insta {
+          /* border: 2px solid blue; */
+          display: block;
+          margin: 8px;
+          text-align: center;
+          font-weight: 500; /*Força do negrito*/
+        }
+
+
+
+/*SWITCH*/
+
+
+  #switch {
+   /* border: 3px solid red; */
+    
+    width: 68px;
+    margin: 4px auto;
+
+    position: relative;
+    }
+    
+    
+      #switch button{
+        display:flex;
+        
+        height: 30px;
+        width: 30px;
+        
+        background: rgba(255, 255, 255, 1) var(--switch-image) no-repeat center;
+        
+       /*  Todos esses podem ser colocados no parametro "background":
+        
+        background-color: rgba(255, 255, 255, 0.5);
+        background-image: var(--switch-image);
+        background-repeat: no-repeat;            
+        background-position: center; */
+        
+        border: none;
+        border-radius: 50%;
+        
+        position: absolute;
+        z-index: 1;
+        transform: translateY(-50%);
+        top: 50%;
+        
+        animation: slide-back 0.6s;
+        
+        left: 0;
+      }
+      
+      #switch button:hover {
+        background-color: var(--switch-bg-hover);
+        outline: 8px solid var(--highlight-color);
+      }
+      
+  .light #switch button {
+        animation: slide-in 0.6s forwards;
+  }
+  
+  
+      
+      #switch span{
+        display: block;
+        background: var(--button-bg);        
+        
+        border: 3px solid var(--button-border);
+        border-radius: 9999px;
+        
+        width: 64px;
+        height: 24px;
+        
+        -webkit-backdrop-filter: blur(5px);
+      }
+
+
+
+
+/*Buttons*/
+    #buttons {
+      display: block;
+      /* border: 3px solid yellow; */ 
+      margin: auto;
+      padding: 20px 1px ;
+    }
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      ul li {
+        border: 2px solid var(--button-border);
+        border-radius: 8px;  
+        
+        background-color: var(--button-bg);
+        
+        -webkit-backdrop-filter: blur(5px);
+        
+        transition: all 0.4s;
+        }
+
+
+      ul li:hover { /*Pseudo-Selector*/
+        border: 2px solid var(--textcolor);
+        background-color: var(--button-bg-hover);
+      }
+      
+      a {
+        text-decoration: none;
+        font-weight: 500;   
+      }
+
+        .button1 {
+          height: 50px;
+          padding: 10px auto;
+          margin: 10px;
+          align-items:  center;
+          justify-content: center;
+          display: flex;
+        } 
+
+            .button1-img {
+              display: inline;
+              justify-content: left;
+              align-items: left;
+              width: 35px;
+              margin: 3px 5px;
+              /* border: 2px solid green; */
+            } 
+
+            .button1-txt {
+              display: inline;
+              /* border: 3px solid blueviolet; */            
+            }
+
+        .button2 {
+          height: 50px;
+          padding: 10px auto;
+          margin: 10px;
+          align-items:  center;
+          justify-content: center;
+          display: flex;
+        }
+
+
+            .button2-img {
+              display: inline;
+              justify-content: left;
+              align-items: left;
+              width: 35px;
+              margin: 3px 5px;
+              /* border: 2px solid green; */
+            }
+
+            .button2-txt {
+              display: inline;
+              /* border: 3px solid blueviolet; */    
+            }
+
+        .button3 {
+          height: 50px;
+          padding: 10px auto;
+          margin: 10px;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+        }
+
+
+            .button3-img {
+              display: inline;
+              justify-content: left;
+              align-items: left;
+              width: 35px;
+              margin: 3px 5px;
+              /* border: 2px solid green; */
+            }
+
+            .button3-txt {
+              /* border: 3px solid blueviolet; */
+              text-align: center;  
+            }
+            
+
+        .button4 {
+          height: 50px;
+          padding: 10px auto;
+          margin: 10px;
+          align-items:  center;
+          justify-content: center;
+          display: flex;
+        }
+
+            .button4-img {
+              display: inline;
+              justify-content: left;
+              align-items: left;
+              width: 35px;
+              margin: 3px 5px;
+              /* border: 2px solid green; */
+            }  
+
+
+            .button4-txt {
+              /* border: 3px solid blueviolet; */
+              text-align: center;               
+            }
+
+
+/* Redes Sociais! */
+
+
+  #social-links {
+    display: flex;
+    
+    /* border: 2px solid lightcoral; */
+    
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+    
+    padding:  0px 24px;
+    
+    gap: 8px;
+  }
+  
+  #social-links a{
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 16px;
+    
+    transition: background-color 0.4s
+  }
+  
+  
+  #social-links a:hover{
+    background-color: var(--highlight-color);
+  }
+
+
+/*RODAPE*/
+
+footer {
+  /* border: 1px solid white; */
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  
+  font-size: 10px;
+  
+  height: 36px;
+  
+  padding: 10px;
+
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+
+@media (min-width:700px) {
+  :root {
+    --background-url: url(./assets/bg-desktop-dark.jpeg);
+  }
+  .light {
+    --background-url: url(./assets/bg-desktop-light.jpeg);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from{
+    left: 50%;
+  }
+  to {
+    left: 0%;
+  }
+}

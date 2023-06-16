@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--Defne o documento HTML5-->
+
+<html lang="pt-br" class="">
+  <!--Elemento root do HTML, com propriedade ja definindo a linguagem-->
+
+  <head>
+    <!--Ajusta configurações do documento, geralmente não visíveis para quem acessa a página-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <!--Configurações de metadados. UTF-8 aceita caracteres especiais-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--Compatibilidade com navegadores antigos-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Parte visível adaptavek ao dispositivo-->
+    <title>Danilinks</title>
+    <!--Nome que aparece na aba-->
+    <!--Esse recuo feitopela formatação do próprio VSCode/Settings.json, chamam-se IDENTAÇÃO, que define
+                a hierarquia e organização do projeto-->
+    <link rel="stylesheet" href="./style.css"/>
+    
+  </head>
+
+  <body>
+    <!--Parte visível-->
+
+    <!--FOTO E @ INICIO-->
+    
+          
+    <div id="container">   <!-- <DIV> Caixa genérica que não tem estilos. BLOCK-->
+      <div id="profile">
+        <div class="image">
+          <img
+            src="./assets/profilepicture.png"
+            alt="Foto de Danielle Tovani sorrindo de jaqueta amarela apoiando o rosto sobre a sua mão, com fundo em madeira"
+          />
+        </div>
+
+        <div class="insta">@danitovani</div>
+      </div>
+
+
+
+
+    <!--SWITCH-->
+      
+    <div id="switch" onclick="toggleMode()">
+      <button></button>
+      <span></span> <!-- <SPAN> Caixa genérica que não tem estilos. INLINE. Evitar uso-->
+    </div>
+
+
+
+
+
+      <!--BOTÕES-->
+        <div id="buttons">
+
+          <ul>
+            <li>
+              <div class="button1"><img class="button1-img" src="./assets/tiktok.png" alt="simbolo do instagram"/><a href="https://www.tiktok.com/@danitovani" target="_blank">
+                  <p class="button1-txt">Follow me on TikTok</p>
+                  </a>
+                </div>
+            </li>
+
+            <li>
+                <div class="button2"><img class="button2-img" src="./assets/instagram.png" alt="simbolo do instagram"/> <a href="#" target="_blank">
+                
+                  <p class="button2-txt">Follow my Professional Instagram!</p>
+                  </a>
+                </div>
+            </li>
+
+            <li>
+                <div class="button3"><img class="button3-img" src="./assets/spotify.png" alt="simbolo do spotify"/><a href="#" target="_blank">
+                 
+                  <p class="button3-txt"> Follow me on Spotify!</p> 
+                  </a>
+                </div>
+            </li>
+
+            <li>
+                <div class="button4"><img class="button4-img" src="./assets/instagram.png" alt="simbolo do instagram"/><a href="#" target="_blank">
+                 
+                    <p class="button4-txt">Follow my Personal Instagram!</p> 
+                  </a>
+                </div>
+            </li>
+          </ul>
+          
+
+
+
+    <!--SOCIAL LINKS-->
+
+        </div>
+        
+            <div id="social-links">
+            
+              <a href="#">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+              
+              <a href="#">
+                <ion-icon name="logo-amazon"></ion-icon>
+              </a>
+              
+              <a href="#">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+              
+              <a href="#">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            
+          </div>
+          
+          <footer>
+            <a href="https://www.instagram.com/nicholasmedeirosdb">Made with love by <b>Nick Medeiros</b></a> 
+          </footer>
+          
+    </div>
+
+
+
+
+
+
+
+
+          
+          
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    
+    
+    <script src="./script.js"></script> <!-- IMPORTAR O JS -->
+  </body>
+</html>
